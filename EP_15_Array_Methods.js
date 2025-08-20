@@ -133,3 +133,7 @@
 // | `find`     | First match    | Finding a specific item                |
 // | `some`     | Boolean        | If **any** match the condition         |
 // | `every`    | Boolean        | If **all** match the condition         |
+
+// If you came across any other interview questions related to arrays, please let me know in the comments. and also if you came this far then do subscribe and like the video. Thanks for watching :)
+
+// ****************************************************************************************************************
