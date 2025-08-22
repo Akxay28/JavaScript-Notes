@@ -147,8 +147,6 @@ function displayProfile(user) {
 
 displayProfile(profile);
 
-// Kindly Comment all the running code and then start to use from the begning of the file
-
 // *********************************************************************************************************
 
 // If you came this Far then do subscribe and like the video, please let me know in the comments. and also  do subscribe and like the video. Thanks for watching :)
