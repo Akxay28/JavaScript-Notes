@@ -1,6 +1,6 @@
 // ***********************************************************************************************
 
-// ! 2 day -> Constructor Function
+// ! 2 day (EP - 19 ) -> Constructor Function
 
 // ***********************************************************************************************
 
@@ -72,7 +72,7 @@
 
 // ***********************************************************************************************
 
-// 3rd day -> Inheritance
+//  ? 3rd day (Ep - 20) -> Inheritance
 
 // ***********************************************************************************************
 
@@ -138,10 +138,10 @@
 
 // ***********************************************************************************************
 
-//! 4th day -> introduction of new keyword and rest and spread operator
+// ? 4th day (EP - 21) -> introduction of new keyword and rest and spread operator
 
-// new keyword  : used to create new objects from constructor functions and class constructors
-// new create an empty object name as this , and also it return itself we dont have to do manually
+// ! new keyword  : used to create new objects from constructor functions and class constructors
+// ! new create an empty object name as this , and also it return itself we dont have to do manually
 
 // ***********************************************************************************************
 
@@ -170,14 +170,108 @@
 // person2.greet(); // Output: Hello, my name is Bob
 // person2.howAreYou(); // Output: I'm fine, how about you?
 
-// or we can write like this
+// ***********************************************************************************************
 
-// function Person(name) {
-//   this.name = name;
-//   this.greet = function () {
-//     console.log("Hello, my name is " + this.name);
-//   };
+// ! The rest operator collects multiple elements into a single array (or object), and is commonly used in:
+// ? Function parameters , Array/object destructuring
+
+// **  Example 1: Rest in array/object destructuring
+
+// Array Destructuring :  using the rest operator
+
+// const ary = [1, 2, 3, 4];
+// const [first, second, ...rest] = ary;
+// console.log(first); // Output: 1
+// console.log(second); // Output: 2
+// console.log(rest); // Output: [3, 4]
+
+// Object Destructuring using the rest operator
+
+// const obj = {
+//   name: "Akshay",
+//   age: 23,
+//   address: {
+//     street: "Dadar",
+//     city: "Mumbai",
+//     state: "Maharastra",
+//   },
+// };
+
+// const { name, age, ...rest } = obj;
+// console.log(name); // "Akshay"
+// console.log(age); // 23
+// console.log(rest); // { address: { street: 'Dadar', city: 'Mumbai', state: 'Maharastra' } }
+
+// **  Example 2: Rest in function parameters
+
+// function sum(...numbers) {
+//   return numbers.reduce((acc, curr) => acc + curr, 0);
+// }
+// console.log(sum(1, 2, 3, 4)); // Output: 10
+// ...numbers collects all arguments into an array.
+
+// ***********************************************************************************************
+
+//  ! SPREAD OPERATOR (...) -> The spread operator expands or spreads the elements from an array (or object) into individual elements.
+//  Common uses:
+// ? Array concatenation or merging (Object Cloning)
+
+// const arr1 = [1, 2];
+// const arr2 = [3, 4];
+// const combined = [...arr1, ...arr2];
+// console.log(combined); // [1, 2, 3, 4]
+
+// ** Object cloning or merging
+
+// const obj1 = { a: 1, b: 2 };
+// const obj2 = { b: 3, c: 4 };
+// const merged = { ...obj1, ...obj2 };
+
+// console.log(merged); // { a: 1, b: 3, c: 4 }
+
+// ** Passing array items as function arguments
+
+// const numbers = [10, 20, 30];
+// console.log(Math.max(...numbers)); // 30
+
+// ***********************************************************************************************
+
+// function greet(firstName, lastName) {
+//   console.log(`Hello, ${firstName} ${lastName}`);
 // }
 
-// const person1 = new Person("Akshay");
-// person1.greet(); // Output: "Hello, my name is Akshay"
+// const nameArr = ["Akshay", "Paul"];
+
+// greet(...nameArr); // Hello, John Doe
+
+// ***********************************************************************************************
+
+// function printDetails(name, age, ...skills) {
+//   console.log(`${name}, Age: ${age}`);
+//   console.log(`Skills: ${skills.join("-")}`);
+// }
+
+// const personInfo = ["Alice", 30, "JS", "React", "Node"];
+
+// printDetails(...personInfo);
+
+// ***********************************************************************************************
+// ! Real Use Case: Combining Both Array Destructuring and Rest Operator
+
+function calculate(operation, ...numbers) {
+  if (operation === "sum") {
+    return numbers.reduce((a, b) => a + b);
+  } else if (operation === "multiply") {
+    return numbers.reduce((a, b) => a * b);
+  }
+}
+
+let nums = [2, 3, 4];
+console.log(calculate("sum", ...nums)); // 9
+console.log(calculate("multiply", ...nums)); // 24
+
+// *********************************************************************************************************
+
+// ? If you came this Far then do subscribe and like the video, please let me know in the comments. and also  do subscribe and like the video. Thanks for watching :)
+
+// *********************************************************************************************************
